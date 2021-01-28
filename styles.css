@@ -1,1 +1,26 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+body {
+  height: 100vh;
+  width: 375px;
+  border-left: 2px solid blue;
+  border-right: 2px solid blue;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  background-color: pink;
+}
+
+.logo img {
+  width: 160px;
+  height: 30px;
+}
+/*# sourceMappingURL=styles.css.map */
