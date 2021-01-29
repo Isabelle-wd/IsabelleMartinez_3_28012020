@@ -1,17 +1,74 @@
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+
+@font-face {
+    font-family: "Shrikland";
+    src: url("Fonts/Shrikhand-Regular.otf");
+    font-weight: normal/bold/inherit;
+    font-style: normal/inherit/italic/oblique;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("Fonts/roboto.zip");
+    font-weight: normal/bold/inherit;
+    font-style: normal/inherit/italic/oblique;
+}
+
 body {
     height: 100vh;
     width: 375px;   
-    border-left: 2px solid blue;
-    border-right: 2px solid blue;
+    font-family: "Roboto","Trebuchet MS", Arial, sans-serif;
 }
 header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;   
-    background-color: pink;
+    height: 60px;  
+    border-bottom: 5px solid #e3e3e3;     
 }
 .logo img {
     width: 160px;
     height: 30px;
+}
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: baseline ;
+    height: 50px;
+    background-color: #eaeaea;
+    font-weight: bold
+    ;
+    .fas {
+        padding-right: 10px;
+    }
+}
+#discover {
+    display: flex;
+    flex-direction: column;
+    height: 300px;    
+    background-color: #f6f6f6;
+    h2 {
+        text-align: center;
+        font-size: 1.4em;
+    }
+    p {
+        text-align: center;              
+    }
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 220px;
+        height: 50px;
+        border-radius: 35px;
+        background-color: $color-primary;
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+    }
 }
