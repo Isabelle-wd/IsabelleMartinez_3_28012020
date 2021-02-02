@@ -3,62 +3,64 @@ $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 
 @font-face {
-    font-family: "Shrikland";
-    src: url("Fonts/Shrikhand-Regular.otf");
-    font-weight: normal/bold/inherit;
-    font-style: normal/inherit/italic/oblique;
+  font-family: "Shrikland";
+  src: url("Fonts/Shrikhand-Regular.otf");
+  font-weight: normal/bold/inherit;
+  font-style: normal/inherit/italic/oblique;
 }
 @font-face {
-    font-family: "Roboto";
-    src: url("Fonts/roboto.zip");
-    font-weight: normal/bold/inherit;
-    font-style: normal/inherit/italic/oblique;
+  font-family: "Roboto";
+  src: url("Fonts/roboto.zip");
+  font-weight: normal/bold/inherit;
+  font-style: normal/inherit/italic/oblique;
 }
 
 body {
-    height: 100vh;
-    width: 375px;   
-    font-family: "Roboto","Trebuchet MS", Arial, sans-serif;
-}
-header {
+  height: 100vh;
+  width: 375px;
+  font-family: "Roboto", "Trebuchet MS", Arial, sans-serif;
+  header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;  
-    border-bottom: 5px solid #e3e3e3;     
-}
-.logo img {
-    width: 160px;
-    height: 30px;
-}
-.location {
-    display: flex;
-    justify-content: center;
-    align-items: baseline ;
-    height: 50px;
-    background-color: #eaeaea;
-    font-weight: bold
-    ;
-    .fas {
-        padding-right: 10px;
+    width: 100%;
+    height: 60px;
+    border-bottom: 5px solid #e3e3e3;
+  }
+  section {
+    height: 2020px;
+    .logo img {
+      width: 160px;
+      height: 30px;
     }
-}
-#discover {
-    display: flex;
-    flex-direction: column;
-    height: 300px;    
-    background-color: #f6f6f6;
-    h2 {
+    .location {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      height: 50px;
+      width: 100%;
+      background-color: #eaeaea;
+      font-weight: bold;
+      .fas {
+        padding-right: 10px;
+      }
+    }
+    #discover {
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      background-color: #f6f6f6;
+      h2 {
         text-align: center;
         font-size: 1.4em;
         padding: 20px 50px;
         margin: 20px auto 0 auto;
-    }
-    p {
-        text-align: center;    
-        margin-top: 0;          
-    }
-    .gradient-button {
+      }
+      p {
+        text-align: center;
+        margin-top: 0;
+      }
+      .gradient-button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -66,140 +68,186 @@ header {
         width: 220px;
         height: 50px;
         border-radius: 35px;
-        background-image: linear-gradient($color-secondary, $color-primary);                    
+        background-image: linear-gradient($color-secondary, $color-primary);
         text-decoration: none;
         color: white;
         font-weight: bold;
         border: none;
         cursor: pointer;
-        font-size: 0.9em;            
+        font-size: 0.9em;
+      }
     }
-}
-#fonctionnement {
-    display: flex;
-    flex-direction: column;
-    height: 440px;
-    h3 {
+    #fonctionnement {
+      display: flex;
+      flex-direction: column;
+      height: 440px;
+      h3 {
         font-size: 1.4em;
         padding: 20px 10px;
-    }
-    #buttons {
+      }
+      #buttons {
         display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
         .button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          width: 90%;
+          height: 79px;
+          margin-bottom: 30px;
+          border-radius: 20px;
+          border: none;
+          font-weight: 600;
+          font-size: 1em;
+          cursor: pointer;
+          background-color: #f6f6f6;
+          box-shadow: 5px 5px 5px #ededed;
+          .number {
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
-            width: 90%;
-            height: 79px;
-            margin-bottom: 30px;
-            border-radius: 20px;
-            border: none;
-            font-weight: 600;
-            font-size: 1em;
-            cursor: pointer;
-            background-color: #f6f6f6;
-            box-shadow: 5px 5px 5px #ededed;
-            .number {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                left: 0;
-                color: white;
-                background-color: $color-primary;
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-            }
-            .fas {
-                font-size: 1.4em;
-                padding-right: 30px;              
-                color: #7e7e7e;
-                &:hover {
-                    color: $color-primary;
-                }
-            }
+            position: absolute;
+            left: 0;
+            color: white;
+            background-color: $color-primary;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+          }
+          .fas {
+            font-size: 1.4em;
+            padding-right: 30px;
+            color: #7e7e7e;
             &:hover {
-                background-color: #f5edff;
+              color: $color-primary;
             }
-            
-                       
+          }
+          &:hover {
+            background-color: #f5edff;
+          }
         }
+      }
     }
-}
-#restaurants {
-    background-color: #f6f6f6;
-    h3 {
+    #restaurants {
+      background-color: #f6f6f6;
+      height: 1210px;
+      h3 {
         font-size: 1.4em;
         padding: 20px 10px;
-    }
-    #liste {
-    }
-    .card {
+      }
+      #liste {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        a {
+          text-decoration: none;
+          color: black;
+          padding-left: 20px;
+        }
+      }
+      .card {
         position: relative;
-        width: 90%;
+        width: 95%;
         height: 252px;
         border-radius: 20px;
         margin-bottom: 20px;
         background-color: white;
         span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          width: 81px;
+          height: 30px;
+          border-radius: 3px;
+          font-size: 0.9em;
+          background-color: #99e2d0;
+          color: #008766;
+        }
+        .card-image {
+          width: 100%;
+          height: 175px;
+          border-radius: 20px 20px 0 0;
+        }
+        .img-1 {
+          background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+          background-size: cover;
+        }
+        .img-2 {
+          background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+          background-size: cover;
+        }
+        .img-3 {
+          background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+          background-size: cover;
+        }
+        .img-4 {
+          background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+          background-size: cover;
+        }
+        .card-body {
+          display: flex;
+          padding-top: 10px;
+          .text {
+            width: 70%;
+            padding-left: 15px;
+            h4 {
+              font-weight: bold;
+              font-size: 1.2em;
+              margin-bottom: 0;
+              margin-top: 10px;
+            }
+            p {
+              margin-top: 5px;
+            }
+          }
+          .like-btn {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            width: 81px;
-            height: 30px;
-            border-radius: 3px;
-            font-size: 0.9em;
-            background-color: #99e2d0;
-            color: #008766;
-        }
-        .card-image {
-            width: 100%;
-            height: 175px;
-            border-radius: 20px 20px 0 0;
+            width: 80px;
+            height: 80px;
+            .fa-heart {
+              position: absolute;
+              right: 20px;
+              top: 15px;
+              font-size: 2em;
             }
-        .img-1 {
-            background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-            background-size: cover;
+          }
         }
-        .card-body {
-            display: flex;
-            padding-top: 10px;
-            .text {
-                width: 70%;
-                padding-left: 15px;
-                h4 {
-                    font-weight: bold;
-                    font-size: 1.2em;
-                    margin-bottom: 0;
-                    margin-top: 10px;
-                }
-                p {
-                    margin-top: 5px;
-                }
-            }
-            .like-btn {
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 80px;
-                height: 80px;                            
-              .fa-heart{
-                position: absolute;
-                right: 20px;
-                top: 15px;
-                font-size: 2em;             
-                }
-            }
-        }
+      }
     }
+  }
+  footer {
+    background-color: #353535;
+    color: white;
+    padding: 4px 30px;
+    h5 {
+      font-family: "Shrikland", "Trebuchet MS", Arial, sans-serif;
+      font-size: 1.2em;
+      font-weight: 200;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.5em;
+      a {
+        text-decoration: none;
+        color: white;
+        :hover {
+          color: $color-secondary;
+        }
+      }
+      .fas {
+        font-size: 0.9em;
+        padding-right: 10px;
+      }
+    }
+  }
 }
-    
-

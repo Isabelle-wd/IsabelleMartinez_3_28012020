@@ -15,10 +15,10 @@
 body {
   height: 100vh;
   width: 375px;
-  font-family: "Roboto","Trebuchet MS", Arial, sans-serif;
+  font-family: "Roboto", "Trebuchet MS", Arial, sans-serif;
 }
 
-header {
+body header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,16 +28,21 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
   height: 60px;
   border-bottom: 5px solid #e3e3e3;
 }
 
-.logo img {
+body section {
+  height: 2020px;
+}
+
+body section .logo img {
   width: 160px;
   height: 30px;
 }
 
-.location {
+body section .location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,15 +53,16 @@ header {
       -ms-flex-align: baseline;
           align-items: baseline;
   height: 50px;
+  width: 100%;
   background-color: #eaeaea;
   font-weight: bold;
 }
 
-.location .fas {
+body section .location .fas {
   padding-right: 10px;
 }
 
-#discover {
+body section #discover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,19 +74,19 @@ header {
   background-color: #f6f6f6;
 }
 
-#discover h2 {
+body section #discover h2 {
   text-align: center;
   font-size: 1.4em;
   padding: 20px 50px;
   margin: 20px auto 0 auto;
 }
 
-#discover p {
+body section #discover p {
   text-align: center;
   margin-top: 0;
 }
 
-#discover .gradient-button {
+body section #discover .gradient-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,7 +110,7 @@ header {
   font-size: 0.9em;
 }
 
-#fonctionnement {
+body section #fonctionnement {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,12 +121,12 @@ header {
   height: 440px;
 }
 
-#fonctionnement h3 {
+body section #fonctionnement h3 {
   font-size: 1.4em;
   padding: 20px 10px;
 }
 
-#fonctionnement #buttons {
+body section #fonctionnement #buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,7 +139,7 @@ header {
           align-items: center;
 }
 
-#fonctionnement #buttons .button {
+body section #fonctionnement #buttons .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,7 +163,7 @@ header {
           box-shadow: 5px 5px 5px #ededed;
 }
 
-#fonctionnement #buttons .button .number {
+body section #fonctionnement #buttons .button .number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,39 +182,59 @@ header {
   border-radius: 50%;
 }
 
-#fonctionnement #buttons .button .fas {
+body section #fonctionnement #buttons .button .fas {
   font-size: 1.4em;
   padding-right: 30px;
   color: #7e7e7e;
 }
 
-#fonctionnement #buttons .button .fas:hover {
+body section #fonctionnement #buttons .button .fas:hover {
   color: #9356dc;
 }
 
-#fonctionnement #buttons .button:hover {
+body section #fonctionnement #buttons .button:hover {
   background-color: #f5edff;
 }
 
-#restaurants {
+body section #restaurants {
   background-color: #f6f6f6;
+  height: 1210px;
 }
 
-#restaurants h3 {
+body section #restaurants h3 {
   font-size: 1.4em;
   padding: 20px 10px;
 }
 
-#restaurants .card {
+body section #restaurants #liste {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+}
+
+body section #restaurants #liste a {
+  text-decoration: none;
+  color: black;
+  padding-left: 20px;
+}
+
+body section #restaurants .card {
   position: relative;
-  width: 90%;
+  width: 95%;
   height: 252px;
   border-radius: 20px;
   margin-bottom: 20px;
   background-color: white;
 }
 
-#restaurants .card span {
+body section #restaurants .card span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,41 +255,56 @@ header {
   color: #008766;
 }
 
-#restaurants .card .card-image {
+body section #restaurants .card .card-image {
   width: 100%;
   height: 175px;
   border-radius: 20px 20px 0 0;
 }
 
-#restaurants .card .img-1 {
+body section #restaurants .card .img-1 {
   background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
 }
 
-#restaurants .card .card-body {
+body section #restaurants .card .img-2 {
+  background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-size: cover;
+}
+
+body section #restaurants .card .img-3 {
+  background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-size: cover;
+}
+
+body section #restaurants .card .img-4 {
+  background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-size: cover;
+}
+
+body section #restaurants .card .card-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 10px;
 }
 
-#restaurants .card .card-body .text {
+body section #restaurants .card .card-body .text {
   width: 70%;
   padding-left: 15px;
 }
 
-#restaurants .card .card-body .text h4 {
+body section #restaurants .card .card-body .text h4 {
   font-weight: bold;
   font-size: 1.2em;
   margin-bottom: 0;
   margin-top: 10px;
 }
 
-#restaurants .card .card-body .text p {
+body section #restaurants .card .card-body .text p {
   margin-top: 5px;
 }
 
-#restaurants .card .card-body .like-btn {
+body section #restaurants .card .card-body .like-btn {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -278,10 +319,42 @@ header {
   height: 80px;
 }
 
-#restaurants .card .card-body .like-btn .fa-heart {
+body section #restaurants .card .card-body .like-btn .fa-heart {
   position: absolute;
   right: 20px;
   top: 15px;
   font-size: 2em;
+}
+
+body footer {
+  background-color: #353535;
+  color: white;
+  padding: 4px 30px;
+}
+
+body footer h5 {
+  font-family: "Shrikland", "Trebuchet MS", Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: 200;
+}
+
+body footer ul {
+  list-style: none;
+  padding: 0;
+  line-height: 1.5em;
+}
+
+body footer ul a {
+  text-decoration: none;
+  color: white;
+}
+
+body footer ul a :hover {
+  color: #ff79da;
+}
+
+body footer ul .fas {
+  font-size: 0.9em;
+  padding-right: 10px;
 }
 /*# sourceMappingURL=styles.css.map */
