@@ -30,19 +30,30 @@ body header {
           align-items: center;
   width: 100%;
   height: 60px;
-  border-bottom: 5px solid #e3e3e3;
+}
+
+body header a {
+  text-decoration: none;
+  width: 10px;
+  padding-right: 100px;
+  color: #353535;
+  font-size: 1.5em;
+}
+
+body header a :hover {
+  color: #9356dc;
 }
 
 body section {
+  width: 100%;
+  position: relative;
+}
+
+body #section-page1 {
   height: 2020px;
 }
 
-body section .logo img {
-  width: 160px;
-  height: 30px;
-}
-
-body section .location {
+body #section-page1 .location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,14 +66,15 @@ body section .location {
   height: 50px;
   width: 100%;
   background-color: #eaeaea;
+  border-top: 5px solid #e3e3e3;
   font-weight: bold;
 }
 
-body section .location .fas {
+body #section-page1 .location .fas {
   padding-right: 10px;
 }
 
-body section #discover {
+body #section-page1 #discover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,19 +86,19 @@ body section #discover {
   background-color: #f6f6f6;
 }
 
-body section #discover h2 {
+body #section-page1 #discover h2 {
   text-align: center;
   font-size: 1.4em;
   padding: 20px 50px;
   margin: 20px auto 0 auto;
 }
 
-body section #discover p {
+body #section-page1 #discover p {
   text-align: center;
   margin-top: 0;
 }
 
-body section #discover .gradient-button {
+body #section-page1 #discover .gradient-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,7 +122,7 @@ body section #discover .gradient-button {
   font-size: 0.9em;
 }
 
-body section #fonctionnement {
+body #section-page1 #fonctionnement {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,12 +133,12 @@ body section #fonctionnement {
   height: 440px;
 }
 
-body section #fonctionnement h3 {
+body #section-page1 #fonctionnement h3 {
   font-size: 1.4em;
   padding: 20px 10px;
 }
 
-body section #fonctionnement #buttons {
+body #section-page1 #fonctionnement #buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,7 +151,7 @@ body section #fonctionnement #buttons {
           align-items: center;
 }
 
-body section #fonctionnement #buttons .button {
+body #section-page1 #fonctionnement #buttons .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,7 +175,7 @@ body section #fonctionnement #buttons .button {
           box-shadow: 5px 5px 5px #ededed;
 }
 
-body section #fonctionnement #buttons .button .number {
+body #section-page1 #fonctionnement #buttons .button .number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,31 +194,31 @@ body section #fonctionnement #buttons .button .number {
   border-radius: 50%;
 }
 
-body section #fonctionnement #buttons .button .fas {
+body #section-page1 #fonctionnement #buttons .button .fas {
   font-size: 1.4em;
   padding-right: 30px;
   color: #7e7e7e;
 }
 
-body section #fonctionnement #buttons .button .fas:hover {
+body #section-page1 #fonctionnement #buttons .button .fas:hover {
   color: #9356dc;
 }
 
-body section #fonctionnement #buttons .button:hover {
+body #section-page1 #fonctionnement #buttons .button:hover {
   background-color: #f5edff;
 }
 
-body section #restaurants {
+body #section-page1 #restaurants {
   background-color: #f6f6f6;
   height: 1210px;
 }
 
-body section #restaurants h3 {
+body #section-page1 #restaurants h3 {
   font-size: 1.4em;
   padding: 20px 10px;
 }
 
-body section #restaurants #liste {
+body #section-page1 #restaurants #liste {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,13 +231,13 @@ body section #restaurants #liste {
   width: 100%;
 }
 
-body section #restaurants #liste a {
+body #section-page1 #restaurants #liste a {
   text-decoration: none;
   color: black;
   padding-left: 20px;
 }
 
-body section #restaurants .card {
+body #section-page1 #restaurants .card {
   position: relative;
   width: 95%;
   height: 252px;
@@ -234,7 +246,7 @@ body section #restaurants .card {
   background-color: white;
 }
 
-body section #restaurants .card span {
+body #section-page1 #restaurants .card span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,56 +267,56 @@ body section #restaurants .card span {
   color: #008766;
 }
 
-body section #restaurants .card .card-image {
+body #section-page1 #restaurants .card .card-image {
   width: 100%;
   height: 175px;
   border-radius: 20px 20px 0 0;
 }
 
-body section #restaurants .card .img-1 {
+body #section-page1 #restaurants .card .img-1 {
   background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
 }
 
-body section #restaurants .card .img-2 {
+body #section-page1 #restaurants .card .img-2 {
   background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   background-size: cover;
 }
 
-body section #restaurants .card .img-3 {
+body #section-page1 #restaurants .card .img-3 {
   background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-size: cover;
 }
 
-body section #restaurants .card .img-4 {
+body #section-page1 #restaurants .card .img-4 {
   background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   background-size: cover;
 }
 
-body section #restaurants .card .card-body {
+body #section-page1 #restaurants .card .card-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 10px;
 }
 
-body section #restaurants .card .card-body .text {
+body #section-page1 #restaurants .card .card-body .text {
   width: 70%;
   padding-left: 15px;
 }
 
-body section #restaurants .card .card-body .text h4 {
+body #section-page1 #restaurants .card .card-body .text h4 {
   font-weight: bold;
   font-size: 1.2em;
   margin-bottom: 0;
   margin-top: 10px;
 }
 
-body section #restaurants .card .card-body .text p {
+body #section-page1 #restaurants .card .card-body .text p {
   margin-top: 5px;
 }
 
-body section #restaurants .card .card-body .like-btn {
+body #section-page1 #restaurants .card .card-body .like-btn {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -319,11 +331,227 @@ body section #restaurants .card .card-body .like-btn {
   height: 80px;
 }
 
-body section #restaurants .card .card-body .like-btn .fa-heart {
+body #section-page1 #restaurants .card .card-body .like-btn .fa-heart {
   position: absolute;
   right: 20px;
   top: 15px;
   font-size: 2em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+body #section-page1 #restaurants .card .card-body .like-btn .fa-heart::before {
+  content: "\f004";
+  font-weight: bold;
+  -webkit-transition: color 1s ease-out;
+  transition: color 1s ease-out;
+}
+
+body #section-page1 #restaurants .card .card-body .like-btn .fa-heart:hover::before {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  cursor: pointer;
+}
+
+body #section-page2 {
+  height: 1380px;
+  background-color: #f6f6f6;
+}
+
+body #section-page2 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body #section-page2 .menu {
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+  position: absolute;
+  top: 210px;
+}
+
+body #section-page2 .menu h2 {
+  font-family: "Shrikland", "Trebuchet MS", Arial, sans-serif;
+  font-weight: lighter;
+  padding: 20px 0 0 20px;
+}
+
+body #section-page2 .menu .menu-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 10px;
+}
+
+body #section-page2 .menu .menu-1 h3 {
+  position: relative;
+  color: #7b7b7b;
+  font-size: 1.1em;
+  font-weight: lighter;
+  margin-left: 15px;
+  height: 30px;
+  width: 100px;
+}
+
+body #section-page2 .menu .menu-1 h3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 35%;
+  border: 2px solid #99e2d0;
+  margin-top: 8px;
+}
+
+body #section-page2 .menu .menu-1 .meal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 240px;
+}
+
+body #section-page2 .menu .menu-1 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  overflow: hidden;
+  width: 95%;
+  height: 70px;
+  border-radius: 20px;
+  border-left: 20px;
+}
+
+body #section-page2 .menu .menu-1 .container .meal-starter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body #section-page2 .menu .menu-1 .container .meal-starter .meal-info {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 80%;
+  padding-top: 5px;
+}
+
+body #section-page2 .menu .menu-1 .container .meal-starter .meal-info h4 {
+  font-size: 1.1em;
+}
+
+body #section-page2 .menu .menu-1 .container .meal-starter .meal-info p {
+  font-size: 0.9em;
+}
+
+body #section-page2 .menu .menu-1 .container .meal-starter .meal-price {
+  min-width: 10px;
+  padding-top: 35px;
+  padding-right: 10px;
+}
+
+body #section-page2 .menu .menu-1 .container .meal-check {
+  width: 0px;
+  background: #99e2d0;
+  -webkit-transition: width 300ms;
+  transition: width 300ms;
+}
+
+body #section-page2 .menu .menu-1 .container .meal-check .fas {
+  color: white;
+  font-size: 1.9em;
+  padding: 15px;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+}
+
+body #section-page2 .menu .menu-1 .container:hover .meal-check {
+  width: 20%;
+}
+
+body #section-page2 .menu .menu-1 .container:hover .meal-check .fas {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+body #section-page2 .menu .menu-1 h4 {
+  font-size: 1.3em;
+  font-weight: 550;
+  margin: 10px 0 0 10px;
+}
+
+body #section-page2 .menu .menu-1 p {
+  color: #606060;
+  font-size: 1.1em;
+  margin: 0 0 0 10px;
+  line-height: 1.5em;
+}
+
+body #section-page2 .menu .menu-1 .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 1.1em;
+  font-weight: 550;
+  color: #353535;
+  width: 10%;
+  padding-top: 32px;
+  margin-right: 20px;
+}
+
+body #section-page2 .gradient-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 50px;
+  left: 80px;
+  margin: auto;
+  width: 220px;
+  height: 50px;
+  border-radius: 35px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(#ff79da, #9356dc);
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9em;
 }
 
 body footer {
@@ -335,7 +563,7 @@ body footer {
 body footer h5 {
   font-family: "Shrikland", "Trebuchet MS", Arial, sans-serif;
   font-size: 1.2em;
-  font-weight: 200;
+  font-weight: lighter;
 }
 
 body footer ul {

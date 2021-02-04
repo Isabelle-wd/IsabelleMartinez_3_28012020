@@ -1,6 +1,7 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
+$color-gradient: linear-gradient($color-secondary, $color-primary);
 
 @font-face {
   font-family: "Shrikland";
@@ -25,14 +26,24 @@ body {
     align-items: center;
     width: 100%;
     height: 60px;
-    border-bottom: 5px solid #e3e3e3;
+    a {
+      text-decoration: none;
+      width: 10px;
+      padding-right: 100px;
+      color: #353535;
+      font-size: 1.5em;
+      :hover {
+        color: $color-primary;
+      }
+    }
   }
   section {
+    
+    width: 100%;
+    position: relative;
+  }
+  #section-page1 {  
     height: 2020px;
-    .logo img {
-      width: 160px;
-      height: 30px;
-    }
     .location {
       display: flex;
       justify-content: center;
@@ -40,6 +51,7 @@ body {
       height: 50px;
       width: 100%;
       background-color: #eaeaea;
+      border-top: 5px solid #e3e3e3;
       font-weight: bold;
       .fas {
         padding-right: 10px;
@@ -68,7 +80,7 @@ body {
         width: 220px;
         height: 50px;
         border-radius: 35px;
-        background-image: linear-gradient($color-secondary, $color-primary);
+        background-image: $color-gradient;
         text-decoration: none;
         color: white;
         font-weight: bold;
@@ -207,23 +219,184 @@ body {
             }
           }
           .like-btn {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 80px;
-            height: 80px;
-            .fa-heart {
-              position: absolute;
-              right: 20px;
-              top: 15px;
-              font-size: 2em;
+            position: absolute;
+            box-sizing: border-box;
+            width: 55px;
+            height: 55px;
+            margin-left: 50%;
+            & {
+              .fa-heart {
+                position: absolute;
+                background: white;
+                font-size: 3rem;
+                color: grey;
+              }
+              .fa-gradient {
+                background-color: white;
+                width: 55px;
+                height: 75px;
+                &:hover {
+                  cursor: pointer;
+                  font-weight: bold;
+                  -moz-animation: backgroundtwo 3s;
+                  -webkit-animation: backgroundtwo 3s;
+                  animation: backgroundtwo 3s;
+                  background: red;
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                }
+              }
+            }
+              }
             }
           }
         }
       }
     }
-  }
+  
+  #section-page2 {  
+    height: 1380px;
+    background-color: #f6f6f6;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+    .menu {      
+      width: 100%;
+      border-radius: 40px 40px 0 0;
+      position: absolute;
+      top: 210px;
+      h2 {
+        font-family: "Shrikland", "Trebuchet MS", Arial, sans-serif;
+        font-weight: lighter;
+        padding: 20px 0 0 20px;
+      }
+      .menu-1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        h3 {
+          position: relative;
+          color: #7b7b7b;
+          font-size: 1.1em;
+          font-weight: lighter;          
+          margin-left: 15px;
+          height: 30px;
+          width: 100px;
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 35%;
+            border: 2px solid $color-tertiary;
+            margin-top: 8px; 
+          }
+        } 
+        .meal {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 240px;
+        }  
+          
+        .container {
+          display: flex;
+          background: white;
+          overflow: hidden;
+          width: 95%;
+          height: 70px;
+          border-radius: 20px;
+          border-left: 20px;
+          
+          .meal-starter {
+            display: flex;
+            justify-content: space-between;
+            flex: 1;  
+            .meal-info {
+              display: block;
+              overflow: hidden;
+              white-space: nowrap;
+              max-width: 80%;
+              padding-top: 5px;
+              h4 {
+                font-size: 1.1em;
+               
+              }
+              p {
+                font-size: 0.9em;
+              
+              }             
+            }          
+            .meal-price {              
+              min-width: 10px;
+              padding-top: 35px;
+              padding-right: 10px;             
+            }
+          }        
+          .meal-check {
+            width: 0px;
+            background: $color-tertiary;
+            transition: width 300ms;          
+            .fas {
+              color: white;
+              font-size: 1.9em;
+              padding: 15px;
+              transition: transform 500ms;
+            }
+          }        
+          &:hover .meal-check {
+            width: 20%;          
+            .fas {
+              transform: rotate(360deg);
+            }
+          }
+        }
+          h4 {
+            font-size: 1.3em;
+            font-weight: 550;
+            margin: 10px 0 0 10px;           
+          }
+          p {
+            color: #606060;
+            font-size: 1.1em;
+            margin: 0 0 0 10px;
+            line-height: 1.5em;
+          }
+          .price {
+            display: flex;
+            justify-content:flex-end;
+            align-items: flex-end;
+            font-size: 1.1em;
+            font-weight: 550;
+            color: #353535;
+            width: 10%;
+            padding-top: 32px;
+            margin-right: 20px;
+          }       
+        }
+    }
+    .gradient-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 50px;
+      left: 80px;
+      margin: auto;
+      width: 220px;
+      height: 50px;
+      border-radius: 35px;
+      background-image: $color-gradient;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+  }  
+  
   footer {
     background-color: #353535;
     color: white;
@@ -231,7 +404,7 @@ body {
     h5 {
       font-family: "Shrikland", "Trebuchet MS", Arial, sans-serif;
       font-size: 1.2em;
-      font-weight: 200;
+      font-weight: lighter;
     }
     ul {
       list-style: none;
@@ -250,4 +423,4 @@ body {
       }
     }
   }
-}
+
