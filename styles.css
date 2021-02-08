@@ -14,8 +14,67 @@
 
 body {
   height: 100vh;
-  width: 375px;
+  margin: 0 auto;
+  padding: 0;
   font-family: "Roboto", "Trebuchet MS", Arial, sans-serif;
+}
+
+body .loader {
+  position: relative;
+  -webkit-box-reflect: below -10px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+body .loader span {
+  position: relative;
+  display: inline-block;
+  font-size: 3em;
+  font-family: "Shrikland";
+  -webkit-animation: animate 1s ease-in-out infinite;
+          animation: animate 1s ease-in-out infinite;
+  -webkit-animation-delay: calc(0.1s * var(--i));
+          animation-delay: calc(0.1s * var(--i));
+}
+
+body .loader .color-primary {
+  color: #9356dc;
+}
+
+body .loader .color-secondary {
+  color: #ff79da;
+}
+
+body .loader .color-tertiary {
+  color: #99e2d0;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  20% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  40%, 100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  20% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  40%, 100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 body header {
@@ -161,7 +220,7 @@ body #section-page1 #fonctionnement #buttons .button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  position: static;
   width: 90%;
   height: 79px;
   margin-bottom: 30px;
@@ -196,7 +255,7 @@ body #section-page1 #fonctionnement #buttons .button .number {
 
 body #section-page1 #fonctionnement #buttons .button .fas {
   font-size: 1.4em;
-  padding-right: 30px;
+  padding-right: 20px;
   color: #7e7e7e;
 }
 
@@ -246,7 +305,7 @@ body #section-page1 #restaurants .card {
   background-color: white;
 }
 
-body #section-page1 #restaurants .card span {
+body #section-page1 #restaurants .card .new {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,70 +376,71 @@ body #section-page1 #restaurants .card .card-body .text p {
 }
 
 body #section-page1 #restaurants .card .card-body .like-btn {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 55px;
 }
 
 body #section-page1 #restaurants .card .card-body .like-btn .fa-heart {
   position: absolute;
-  right: 20px;
-  top: 15px;
-  font-size: 2em;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(#ff79da, #9356dc);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  font-size: 2rem;
+  color: #424040;
 }
 
-body #section-page1 #restaurants .card .card-body .like-btn .fa-heart::before {
-  content: "\f004";
-  font-weight: bold;
-  -webkit-transition: color 1s ease-out;
-  transition: color 1s ease-out;
+body #section-page1 #restaurants .card .card-body .like-btn .fa-gradient {
+  width: 55px;
+  height: 75px;
 }
 
-body #section-page1 #restaurants .card .card-body .like-btn .fa-heart:hover::before {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(#ff79da, #9356dc);
+body #section-page1 #restaurants .card .card-body .like-btn .fa-gradient:hover {
   cursor: pointer;
+  font-weight: bold;
+  -webkit-animation: backgroundtwo 3s;
+  animation: backgroundtwo 3s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-body #section-page2 {
+#section-page2 {
   height: 1380px;
   background-color: #f6f6f6;
 }
 
-body #section-page2 img {
+#section-page2 img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-body #section-page2 .menu {
+#section-page2 .menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   border-radius: 40px 40px 0 0;
   position: absolute;
   top: 210px;
 }
 
-body #section-page2 .menu h2 {
+#section-page2 .menu h2 {
   font-family: "Shrikland", "Trebuchet MS", Arial, sans-serif;
   font-weight: lighter;
   padding: 20px 0 0 20px;
 }
 
-body #section-page2 .menu .menu-1 {
+#section-page2 .menu .menu-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,7 +451,7 @@ body #section-page2 .menu .menu-1 {
   margin-left: 10px;
 }
 
-body #section-page2 .menu .menu-1 h3 {
+#section-page2 .menu .menu-1 h3 {
   position: relative;
   color: #7b7b7b;
   font-size: 1.1em;
@@ -401,7 +461,7 @@ body #section-page2 .menu .menu-1 h3 {
   width: 100px;
 }
 
-body #section-page2 .menu .menu-1 h3::after {
+#section-page2 .menu .menu-1 h3::after {
   content: '';
   display: block;
   position: absolute;
@@ -410,7 +470,7 @@ body #section-page2 .menu .menu-1 h3::after {
   margin-top: 8px;
 }
 
-body #section-page2 .menu .menu-1 .meal {
+#section-page2 .menu .menu-1 .meal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -424,60 +484,64 @@ body #section-page2 .menu .menu-1 .meal {
   height: 240px;
 }
 
-body #section-page2 .menu .menu-1 .container {
+#section-page2 .menu .menu-1 .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background: white;
   overflow: hidden;
-  width: 95%;
+  width: 97%;
   height: 70px;
   border-radius: 20px;
   border-left: 20px;
 }
 
-body #section-page2 .menu .menu-1 .container .meal-starter {
+#section-page2 .menu .menu-1 .container .meal-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 99%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
-body #section-page2 .menu .menu-1 .container .meal-starter .meal-info {
+#section-page2 .menu .menu-1 .container .meal-box .meal-info {
   display: block;
+  padding-top: 5px;
+  max-width: 80%;
+}
+
+#section-page2 .menu .menu-1 .container .meal-box .meal-info h4 {
+  font-size: 1.1em;
   overflow: hidden;
   white-space: nowrap;
-  max-width: 80%;
-  padding-top: 5px;
+  text-overflow: ellipsis;
 }
 
-body #section-page2 .menu .menu-1 .container .meal-starter .meal-info h4 {
-  font-size: 1.1em;
-}
-
-body #section-page2 .menu .menu-1 .container .meal-starter .meal-info p {
+#section-page2 .menu .menu-1 .container .meal-box .meal-info p {
   font-size: 0.9em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-body #section-page2 .menu .menu-1 .container .meal-starter .meal-price {
+#section-page2 .menu .menu-1 .container .meal-box .meal-price {
   min-width: 10px;
   padding-top: 35px;
   padding-right: 10px;
 }
 
-body #section-page2 .menu .menu-1 .container .meal-check {
+#section-page2 .menu .menu-1 .container .meal-check {
   width: 0px;
   background: #99e2d0;
   -webkit-transition: width 300ms;
   transition: width 300ms;
 }
 
-body #section-page2 .menu .menu-1 .container .meal-check .fas {
+#section-page2 .menu .menu-1 .container .meal-check .fas {
   color: white;
   font-size: 1.9em;
   padding: 15px;
@@ -487,29 +551,29 @@ body #section-page2 .menu .menu-1 .container .meal-check .fas {
   transition: transform 500ms, -webkit-transform 500ms;
 }
 
-body #section-page2 .menu .menu-1 .container:hover .meal-check {
-  width: 20%;
+#section-page2 .menu .menu-1 .container:hover .meal-check {
+  width: 60px;
 }
 
-body #section-page2 .menu .menu-1 .container:hover .meal-check .fas {
+#section-page2 .menu .menu-1 .container:hover .meal-check .fas {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-body #section-page2 .menu .menu-1 h4 {
+#section-page2 .menu .menu-1 h4 {
   font-size: 1.3em;
   font-weight: 550;
   margin: 10px 0 0 10px;
 }
 
-body #section-page2 .menu .menu-1 p {
+#section-page2 .menu .menu-1 p {
   color: #606060;
   font-size: 1.1em;
   margin: 0 0 0 10px;
   line-height: 1.5em;
 }
 
-body #section-page2 .menu .menu-1 .price {
+#section-page2 .menu .menu-1 .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -527,7 +591,7 @@ body #section-page2 .menu .menu-1 .price {
   margin-right: 20px;
 }
 
-body #section-page2 .gradient-button {
+#section-page2 .gradient-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -554,35 +618,37 @@ body #section-page2 .gradient-button {
   font-size: 0.9em;
 }
 
-body footer {
+footer {
   background-color: #353535;
   color: white;
   padding: 4px 30px;
 }
 
-body footer h5 {
+footer h5 {
   font-family: "Shrikland", "Trebuchet MS", Arial, sans-serif;
   font-size: 1.2em;
   font-weight: lighter;
 }
 
-body footer ul {
+footer ul {
   list-style: none;
   padding: 0;
   line-height: 1.5em;
 }
 
-body footer ul a {
+footer ul a {
   text-decoration: none;
   color: white;
 }
 
-body footer ul a :hover {
+footer ul a :hover {
   color: #ff79da;
 }
 
-body footer ul .fas {
+footer ul .fas {
   font-size: 0.9em;
   padding-right: 10px;
 }
+
+/* Responsive media */
 /*# sourceMappingURL=styles.css.map */

@@ -18,8 +18,47 @@ $color-gradient: linear-gradient($color-secondary, $color-primary);
 
 body {
   height: 100vh;
-  width: 375px;
+  margin: 0 auto;
+  padding: 0;
   font-family: "Roboto", "Trebuchet MS", Arial, sans-serif;
+  .loader {
+    position: relative;
+    width: 100%;
+    -webkit-box-reflect: below -10px linear-gradient(transparent, rgba(0,0,0,0.5));
+    span {
+      position: relative;
+      display: inline-block;
+      font-size: 3em;
+      font-family: "Shrikland";
+      animation: animate 1s ease-in-out infinite;
+      animation-delay: calc(0.1s * var(--i));
+    }  
+    .color-primary {
+      color: $color-primary;
+      }
+    .color-secondary {
+      color: $color-secondary;
+      }
+    .color-tertiary {
+      color: $color-tertiary;
+
+    }
+    @keyframes animate
+    {
+      0%
+      {
+        transform: translateY(0px);
+      }
+      20%
+      {
+        transform: translateY(-20px);
+      }
+      40%,100%
+      {
+        transform: translateY(0px);
+      }
+      }   
+    }
   header {
     display: flex;
     justify-content: center;
@@ -38,7 +77,6 @@ body {
     }
   }
   section {
-    
     width: 100%;
     position: relative;
   }
@@ -105,7 +143,7 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          position: relative;
+          position: static;
           width: 90%;
           height: 79px;
           margin-bottom: 30px;
@@ -119,9 +157,9 @@ body {
           .number {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: center;  
             position: absolute;
-            left: 0;
+            left: 0;         
             color: white;
             background-color: $color-primary;
             width: 30px;
@@ -130,7 +168,7 @@ body {
           }
           .fas {
             font-size: 1.4em;
-            padding-right: 30px;
+            padding-right: 20px;
             color: #7e7e7e;
             &:hover {
               color: $color-primary;
@@ -167,7 +205,7 @@ body {
         border-radius: 20px;
         margin-bottom: 20px;
         background-color: white;
-        span {
+        .new {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -219,50 +257,53 @@ body {
             }
           }
           .like-btn {
-            position: absolute;
-            box-sizing: border-box;
-            width: 55px;
+            display: flex;
+            justify-content: center;
+            width: 100px;
             height: 55px;
-            margin-left: 50%;
-            & {
-              .fa-heart {
-                position: absolute;
-                background: white;
-                font-size: 3rem;
-                color: grey;
-              }
-              .fa-gradient {
-                background-color: white;
-                width: 55px;
-                height: 75px;
-                &:hover {
-                  cursor: pointer;
-                  font-weight: bold;
-                  -moz-animation: backgroundtwo 3s;
-                  -webkit-animation: backgroundtwo 3s;
-                  animation: backgroundtwo 3s;
-                  background: red;
-                  -webkit-background-clip: text;
-                  background-clip: text;
-                  -webkit-text-fill-color: transparent;
-                }
-              }
+          
+            & .fa-heart {
+              position: absolute;
+              font-size: 2rem;
+              color: rgb(66, 64, 64);
             }
+          
+            & .fa-gradient {
+              width: 55px;
+              height: 75px;
+            }
+          
+            & .fa-gradient:hover {
+              cursor: pointer;
+              font-weight: bold;
+              -moz-animation: backgroundtwo 3s;
+              -webkit-animation: backgroundtwo 3s;
+              animation: backgroundtwo 3s;
+              background: $color-gradient;
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+         
               }
             }
           }
         }
       }
-    }
-  
+
   #section-page2 {  
     height: 1380px;
     background-color: #f6f6f6;
     img {
       width: 100%;
       object-fit: cover;
+      
     }
     .menu {      
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
       width: 100%;
       border-radius: 40px 40px 0 0;
       position: absolute;
@@ -298,34 +339,35 @@ body {
           flex-direction: column;
           justify-content: space-between;
           height: 240px;
-        }  
-          
+        }     
         .container {
           display: flex;
           background: white;
           overflow: hidden;
-          width: 95%;
+          width: 97%;
           height: 70px;
           border-radius: 20px;
-          border-left: 20px;
-          
-          .meal-starter {
+          border-left: 20px;  
+          .meal-box {
             display: flex;
             justify-content: space-between;
-            flex: 1;  
+            width: 99%; 
+            flex-shrink: 1;
             .meal-info {
               display: block;
-              overflow: hidden;
-              white-space: nowrap;
-              max-width: 80%;
               padding-top: 5px;
+              max-width: 80%;
               h4 {
                 font-size: 1.1em;
-               
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;              
               }
               p {
-                font-size: 0.9em;
-              
+                font-size: 0.9em;  
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;            
               }             
             }          
             .meal-price {              
@@ -346,7 +388,7 @@ body {
             }
           }        
           &:hover .meal-check {
-            width: 20%;          
+            width: 60px;         
             .fas {
               transform: rotate(360deg);
             }
@@ -395,7 +437,7 @@ body {
       cursor: pointer;
       font-size: 0.9em;
     }
-  }  
+  }
   
   footer {
     background-color: #353535;
@@ -424,3 +466,9 @@ body {
     }
   }
 
+/* Responsive media */
+@media screen and (min-width: 620px) {}
+
+@media screen and (min-width: 900px) {}
+
+@media screen and (min-width: 1200px) {}
