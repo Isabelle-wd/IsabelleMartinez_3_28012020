@@ -300,14 +300,13 @@ body {
         }
       }
     }
-
+  }
   #section-page2 {  
     height: 1380px;
     background-color: #f6f6f6;
     img {
       width: 100%;
-      object-fit: cover;
-      
+      object-fit: cover; 
     }
     .menu {      
       display: grid;
@@ -426,6 +425,7 @@ body {
             margin-right: 20px;
           }       
         }
+      }  
     }
     .gradient-button {
       display: flex;
@@ -474,5 +474,4 @@ body {
       }
     }
   }
-}
-  }
+
