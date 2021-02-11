@@ -13,14 +13,17 @@
 }
 
 body {
-  height: 100vh;
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  margin: 0;
   padding: 0;
   font-family: "Roboto", "Trebuchet MS", Arial, sans-serif;
 }
 
-body .loader-wrapper {
+body .loader {
+  /* when page is loading */
   position: fixed;
+  background-color: white;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -35,26 +38,26 @@ body .loader-wrapper {
   -webkit-box-reflect: below -10px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
 }
 
-body .loader-wrapper span {
+body .loader span {
   position: relative;
   display: inline-block;
   font-size: 3em;
   font-family: "Shrikland";
-  -webkit-animation: animate 1s ease-in-out infinite;
-          animation: animate 1s ease-in-out infinite;
+  -webkit-animation: animate 1s ease-in-out;
+          animation: animate 1s ease-in-out;
   -webkit-animation-delay: calc(0.1s * var(--i));
           animation-delay: calc(0.1s * var(--i));
 }
 
-body .loader-wrapper .color-primary {
+body .loader .color-primary {
   color: #9356dc;
 }
 
-body .loader-wrapper .color-secondary {
+body .loader .color-secondary {
   color: #ff79da;
 }
 
-body .loader-wrapper .color-tertiary {
+body .loader .color-tertiary {
   color: #99e2d0;
 }
 
@@ -67,9 +70,12 @@ body .loader-wrapper .color-tertiary {
     -webkit-transform: translateY(-20px);
             transform: translateY(-20px);
   }
-  40%, 100% {
+  40%, 99% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+  100% {
+    display: none;
   }
 }
 
@@ -82,9 +88,12 @@ body .loader-wrapper .color-tertiary {
     -webkit-transform: translateY(-20px);
             transform: translateY(-20px);
   }
-  40%, 100% {
+  40%, 99% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+  100% {
+    display: none;
   }
 }
 
@@ -98,14 +107,18 @@ body header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   width: 100%;
-  height: 60px;
+  height: 65px;
 }
 
 body header a {
+  position: absolute;
+  left: 0;
   text-decoration: none;
   width: 10px;
-  padding-right: 100px;
+  padding-left: 5%;
+  padding-top: 5px;
   color: #353535;
   font-size: 1.5em;
 }
@@ -114,16 +127,12 @@ body header a :hover {
   color: #9356dc;
 }
 
-body section {
-  width: 100%;
-  position: relative;
-}
-
 body #section-page1 {
   height: 2020px;
+  width: 100%;
 }
 
-body #section-page1 .location {
+body #section-page1 #part1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,45 +149,38 @@ body #section-page1 .location {
   font-weight: bold;
 }
 
-body #section-page1 .location .fas {
+body #section-page1 #part1 .fas {
   padding-right: 10px;
 }
 
-body #section-page1 #discover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+body #section-page1 #part2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  justify-items: center;
+  width: 100%;
   height: 300px;
   background-color: #f6f6f6;
+  margin: auto;
+  padding: 0;
 }
 
-body #section-page1 #discover h2 {
+body #section-page1 #part2 h2 {
   text-align: center;
   font-size: 1.4em;
   padding: 20px 50px;
   margin: 20px auto 0 auto;
 }
 
-body #section-page1 #discover p {
+body #section-page1 #part2 p {
   text-align: center;
   margin-top: 0;
+  margin-right: 2px;
 }
 
-body #section-page1 #discover .gradient-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto;
+body #section-page1 #part2 .btn {
+  /* Button "Explorer nos menus" */
   width: 220px;
   height: 50px;
   border-radius: 35px;
@@ -192,7 +194,8 @@ body #section-page1 #discover .gradient-button {
   font-size: 0.9em;
 }
 
-body #section-page1 #fonctionnement {
+body #section-page1 #part3 {
+  /* "Fonctionnement" */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -203,12 +206,12 @@ body #section-page1 #fonctionnement {
   height: 440px;
 }
 
-body #section-page1 #fonctionnement h3 {
+body #section-page1 #part3 h3 {
   font-size: 1.4em;
-  padding: 20px 10px;
+  padding: 20px 5%;
 }
 
-body #section-page1 #fonctionnement #buttons {
+body #section-page1 #part3 #buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,20 +224,19 @@ body #section-page1 #fonctionnement #buttons {
           align-items: center;
 }
 
-body #section-page1 #fonctionnement #buttons .button {
+body #section-page1 #part3 #buttons .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: static;
   width: 90%;
   height: 79px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-radius: 20px;
   border: none;
   font-weight: 600;
@@ -245,7 +247,7 @@ body #section-page1 #fonctionnement #buttons .button {
           box-shadow: 5px 5px 5px #ededed;
 }
 
-body #section-page1 #fonctionnement #buttons .button .number {
+body #section-page1 #part3 #buttons .button .number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,27 +257,45 @@ body #section-page1 #fonctionnement #buttons .button .number {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  left: 0;
-  color: white;
-  background-color: #9356dc;
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  margin-right: 20px;
+  color: white;
+  background-color: #9356dc;
 }
 
-body #section-page1 #fonctionnement #buttons .button .fas {
+body #section-page1 #part3 #buttons .button .icon.title {
+  width: 90%;
+}
+
+body #section-page1 #part3 #buttons .button .icon.title .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #section-page1 #part3 #buttons .button:hover {
+  background-color: #f5edff;
+  -webkit-box-shadow: 10px 10px 10px #ededed;
+          box-shadow: 10px 10px 10px #ededed;
+}
+
+body #section-page1 #part3 #buttons .button .fas {
   font-size: 1.4em;
-  padding-right: 20px;
+  width: 30px;
+  height: 30px;
   color: #7e7e7e;
 }
 
-body #section-page1 #fonctionnement #buttons .button .fas:hover {
+body #section-page1 #part3 #buttons .button .fas:hover {
   color: #9356dc;
-}
-
-body #section-page1 #fonctionnement #buttons .button:hover {
-  background-color: #f5edff;
 }
 
 body #section-page1 #restaurants {
@@ -285,7 +305,7 @@ body #section-page1 #restaurants {
 
 body #section-page1 #restaurants h3 {
   font-size: 1.4em;
-  padding: 20px 10px;
+  padding: 20px 5%;
 }
 
 body #section-page1 #restaurants #liste {
@@ -296,6 +316,9 @@ body #section-page1 #restaurants #liste {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
   width: 100%;
@@ -304,7 +327,7 @@ body #section-page1 #restaurants #liste {
 body #section-page1 #restaurants #liste a {
   text-decoration: none;
   color: black;
-  padding-left: 20px;
+  padding-left: 5%;
 }
 
 body #section-page1 #restaurants .card {
@@ -387,15 +410,17 @@ body #section-page1 #restaurants .card .card-body .text p {
 }
 
 body #section-page1 #restaurants .card .card-body .like-btn {
+  /* Heart icon */
   position: absolute;
-  top: 90%;
-  right: 10%;
+  width: 40px;
+  top: 85%;
+  right: 5%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
 body #section-page1 #restaurants .card .card-body .like-btn .fa-heart {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 body #section-page1 #restaurants .card .card-body .like-btn .heart {
@@ -436,34 +461,104 @@ body #section-page1 #restaurants .card .card-body .like-btn .heart-full {
 }
 
 body #section-page2 {
-  height: 1380px;
+  position: relative;
   background-color: #f6f6f6;
+  width: 100%;
+  height: 1380px;
 }
 
 body #section-page2 img {
   width: 100%;
+  height: 255px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 body #section-page2 .menu {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  position: absolute;
+  top: 220px;
+  background-color: #f6f6f6;
   width: 100%;
   border-radius: 40px 40px 0 0;
-  position: absolute;
-  top: 210px;
+}
+
+body #section-page2 .menu #title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  padding-left: 15px;
+  padding-right: 10px;
 }
 
 body #section-page2 .menu h2 {
+  font-size: 1.6em;
+  font-weight: 200;
+  height: 20px;
   font-family: "Shrikland", "Trebuchet MS", Arial, sans-serif;
-  font-weight: lighter;
-  padding: 20px 0 0 20px;
+}
+
+body #section-page2 .menu .like-btn {
+  /* Heart icon */
+  width: 40px;
+  margin-top: 35px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body #section-page2 .menu .like-btn .fa-heart {
+  font-size: 30px;
+}
+
+body #section-page2 .menu .like-btn .heart {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-text-stroke: 2px white;
+}
+
+body #section-page2 .menu .like-btn .heart:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0px white;
+}
+
+body #section-page2 .menu .like-btn .heart:hover .heart-full {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+body #section-page2 .menu .like-btn .heart-full {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 body #section-page2 .menu .menu-1 {
@@ -520,6 +615,36 @@ body #section-page2 .menu .menu-1 .container {
   height: 70px;
   border-radius: 20px;
   border-left: 20px;
+  -webkit-animation: fadeIn ease-out 2s 1;
+          animation: fadeIn ease-out 2s 1;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px, -10px);
+            transform: translate(0px, -10px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px, -10px);
+            transform: translate(0px, -10px);
+  }
 }
 
 body #section-page2 .menu .menu-1 .container .meal-box {
@@ -586,20 +711,20 @@ body #section-page2 .menu .menu-1 .container:hover .meal-check .fas {
           transform: rotate(360deg);
 }
 
-body #section-page2 .menu .menu-1 h4 {
+body #section-page2 .menu .menu-1 .container h4 {
   font-size: 1.3em;
   font-weight: 550;
   margin: 10px 0 0 10px;
 }
 
-body #section-page2 .menu .menu-1 p {
+body #section-page2 .menu .menu-1 .container p {
   color: #606060;
   font-size: 1.1em;
   margin: 0 0 0 10px;
   line-height: 1.5em;
 }
 
-body #section-page2 .menu .menu-1 .price {
+body #section-page2 .menu .menu-1 .container .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -617,20 +742,11 @@ body #section-page2 .menu .menu-1 .price {
   margin-right: 20px;
 }
 
-body .gradient-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+body #section-page2 .btn-order {
+  /* Button "Commander" */
   position: absolute;
   bottom: 50px;
-  left: 80px;
-  margin: auto;
+  left: 25%;
   width: 220px;
   height: 50px;
   border-radius: 35px;
@@ -644,35 +760,48 @@ body .gradient-button {
   font-size: 0.9em;
 }
 
-footer {
+body footer {
   background-color: #353535;
   color: white;
   padding: 4px 30px;
 }
 
-footer h5 {
+body footer h5 {
   font-family: "Shrikland", "Trebuchet MS", Arial, sans-serif;
   font-size: 1.2em;
   font-weight: lighter;
 }
 
-footer ul {
+body footer ul {
   list-style: none;
   padding: 0;
   line-height: 1.5em;
 }
 
-footer ul a {
+body footer ul a {
   text-decoration: none;
   color: white;
 }
 
-footer ul a :hover {
+body footer ul li:hover {
   color: #ff79da;
 }
 
-footer ul .fas {
+body footer ul .fas {
   font-size: 0.9em;
   padding-right: 10px;
+}
+
+@media (min-width: 950px) {
+  body #section-page2 .menu .menu-1 .meal {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: auto;
+  }
+  body #section-page2 .menu .menu-1 .meal .container {
+    margin: 10px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

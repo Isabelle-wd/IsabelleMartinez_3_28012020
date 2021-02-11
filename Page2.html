@@ -10,16 +10,24 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+    <header id="header-page2">
+
         <div class="logo">
             <img src="images/logo/ohmyfood@2x.svg" alt="logo de l'entreprise">
+            <a href="index.html"><i class="fas fa-arrow-left"></i></a>
         </div>
     </header>
     <section id="section-page2">
         <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
         <div class="menu">
-            <h2>La Palette du Goût</h2>
+            <div id="title">
+                <h2>La Palette du Goût</h2>
+                <div class="like-btn">
+                    <i class="far fa-heart heart">
+                        <i class="fas fa-heart heart-full"></i>
+                    </i>
+                </div>
+            </div>
             <div class="menu-1">
                 <h3>ENTRÉES</h3>
                 <div class="meal">
@@ -142,23 +150,17 @@
 
             </div>
         </div>
-        <button class="btn gradient-button">Commander</button>
+        <div class="btn gradient-button">
+            <button class="btn-order">Commander</button>
+        </div>
     </section>
     <footer>
         <h5>ohmyfood</h5>
         <ul>
-            <a href="#">
-                <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
-            </a>
-            <a href="#">
-                <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-            </a>
-            <a href="#">
-                <li>Mentions légales</li>
-            </a>
-            <a href="#">
-                <li>Contact</li>
-            </a>
+            <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </footer>
 </body>
