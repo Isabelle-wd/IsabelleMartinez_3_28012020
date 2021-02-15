@@ -36,6 +36,18 @@ body .loader {
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-reflect: below -10px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  animation: loader 3s forwards;
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 body .loader span {
@@ -43,8 +55,8 @@ body .loader span {
   display: inline-block;
   font-size: 3em;
   font-family: "Shrikland";
-  -webkit-animation: animate 1s ease-in-out;
-          animation: animate 1s ease-in-out;
+  -webkit-animation: animate 1s ease-in-out infinite;
+          animation: animate 1s ease-in-out infinite;
   -webkit-animation-delay: calc(0.1s * var(--i));
           animation-delay: calc(0.1s * var(--i));
 }
@@ -70,12 +82,12 @@ body .loader .color-tertiary {
     -webkit-transform: translateY(-20px);
             transform: translateY(-20px);
   }
-  40%, 99% {
+  100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+            opacity: 1;
   }
-  100% {
-    display: none;
+  
   }
 }
 
