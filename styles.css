@@ -29,6 +29,7 @@ body .loader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 1000;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -42,7 +43,6 @@ body .loader {
   0% {
     opacity: 1;
     visibility: visible;
-
   }
   100% {
     opacity: 0;
@@ -86,8 +86,6 @@ body .loader .color-tertiary {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
             opacity: 1;
-  }
-  
   }
 }
 
@@ -349,6 +347,7 @@ body #section-page1 #restaurants .card {
   border-radius: 20px;
   margin-bottom: 20px;
   background-color: white;
+  box-shadow: 0 10px 10px -5px;
 }
 
 body #section-page1 #restaurants .card .new {
@@ -635,6 +634,7 @@ body #section-restaurants .menu .menu-1 .meal .container {
   border-radius: 20px;
   margin: 10px;
   padding-left: 10px;
+  box-shadow: 0 10px 10px -5px;
   cursor: pointer;
   -webkit-animation: fadeIn ease-out 2s 1;
           animation: fadeIn ease-out 2s 1;
