@@ -580,7 +580,6 @@ body #section-restaurants .menu .menu-1 {
       -ms-flex-direction: column;
           flex-direction: column;
   height: auto;       
-  padding: 10px;
   width: 100%;
 }
 
@@ -613,7 +612,6 @@ body #section-restaurants .menu .menu-1 .meal {
           flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 100%;
   height: auto;
 }
@@ -624,7 +622,7 @@ body #section-restaurants .menu .menu-1 .meal .container {
   display: flex;
   background: white;
   overflow: hidden;
-  width: 90%;
+  width: 95%;
   height: 80px;
   border-radius: 20px;
   margin: 5px;
@@ -670,12 +668,18 @@ body #section-restaurants .menu .menu-1 .meal .container .meal-box {
   width: 100%;
   -ms-flex-negative: 1;
       flex-shrink: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 body #section-restaurants .menu .menu-1 .meal .container .meal-box .meal-info {
   display: block;
   padding-top: 5px;
   max-width: 95%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 body #section-restaurants .menu .menu-1 .meal .container .meal-box .meal-info h4 {
@@ -702,6 +706,8 @@ body #section-restaurants .menu .menu-1 .meal .container .meal-box .meal-price {
 }
 
 body #section-restaurants .menu .menu-1 .meal .container .meal-check {
+  display: flex;
+  align-items: center;
   width: 0px;
   background: #99e2d0;
   -webkit-transition: width 300ms;
