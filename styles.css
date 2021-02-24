@@ -246,8 +246,7 @@ body #section-page1 #part3 #buttons .button {
           justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  position: relative;        
+          align-items: center;       
   width: 90%;
   height: 79px;
   margin-bottom: 20px;
@@ -271,7 +270,8 @@ body #section-page1 #part3 #buttons .button .number {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;      
+  position: relative;      
+  left: -2;
   left: -0.50em;  
   width: 30px;
   height: 30px;
@@ -279,7 +279,6 @@ body #section-page1 #part3 #buttons .button .number {
   color: white;
   background-color: #9356dc;
 }
-
 body #section-page1 #part3 #buttons .button .icon.title .icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,8 +419,8 @@ body #section-page1 #restaurants .card .card-body .text p {
   margin-top: 5px;
 }
 
+/* Heart icon */
 body #section-page1 #restaurants .card .card-body .like-btn {
-  /* Heart icon */
   position: absolute;
   width: 40px;
   top: 85%;
@@ -500,6 +499,7 @@ body #section-restaurants .menu {
   width: 100%;
   height: auto;
   border-radius: 40px 40px 0 0;
+  
 }
 
 body #section-restaurants .menu #title {
@@ -526,8 +526,8 @@ body #section-restaurants .menu h2 {
   font-family: "Shrikland", "Trebuchet MS", Arial, sans-serif;
 }
 
+ /* Heart icon */
 body #section-restaurants .menu .like-btn {
-  /* Heart icon */
   width: 40px;
   margin-top: 40px;
   -webkit-transform: translate(-50%, -50%);
@@ -845,7 +845,6 @@ body footer ul .fas {
   body #section-restaurants .menu .like-btn .fa-heart {
     font-size: 40px;
   }
-
   
 }
 /* Desktop */
