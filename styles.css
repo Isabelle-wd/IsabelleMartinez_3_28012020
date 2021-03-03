@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("Fonts/roboto.zip");
+  src: url("Fonts/roboto/Roboto-Regular.ttf");
   font-weight: normal/bold/inherit;
   font-style: normal/inherit/italic/oblique;
 }
@@ -17,7 +17,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", "Trebuchet MS", Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body .loader {
