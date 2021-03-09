@@ -49,19 +49,19 @@ body .loader .letter:nth-child(3) {
   animation-delay: .11s;
 }
 body .loader .letter:nth-child(4) {
-  animation-delay: .9s;
+  animation-delay: .09s;
 }
 body .loader .letter:nth-child(5) {
-  animation-delay: .7s;
+  animation-delay: .07s;
 }
 body .loader .letter:nth-child(6) {
-  animation-delay: .5s;
+  animation-delay: .05s;
 }
 body .loader .letter:nth-child(7) {
-  animation-delay: .3s;
+  animation-delay: .03s;
 }
 body .loader .letter:nth-child(8) {
-  animation-delay: .1s;
+  animation-delay: .01s;
 }
 @keyframes loader {
   0% {
